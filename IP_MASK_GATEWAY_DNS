@@ -1,1 +1,15 @@
-
+URL(Uniform Resource Locator) specific
+     Port: corresponding to each service in application layer, such as HTTP (80), telnet (23) 
+Transport Layer: TCP: Three-way Hand-Shake (1: c->s SYN; 2: s->c SYN, ACK; 3: c->s ACK ) before data transmission;
+                      Four-way Hand-Shake (1: c->s FIN; 2: s->c ACK; 3: s->c FIN; 4: c->s ACK) after data transmission;
+                      reliable; connection-oriented byte stream; use checksum to ensure the correctness; use sliding window for flow control; change the window size dynamically for congestion control
+                  SYN Flood: the client spoofed fake IP addresses and sent them to the server to make the server keep retransmission since the IP Addresses don't exit. This leads to congestion for networks and dumps.
+                  Solution: identify it by the amount of hal-open connection
+                  Defense: shorten SYN timeout; set the threshold of the amount of hal-open connection; SYN cookies
+UDP: lack of reliability, has length, no connection, support supports multicast and broadcast.
+Network Layer: mark each specific host in the world, the Real IP Address = IP Address & Mask & (other operations)
+               Mask is used to split network and host [network:host], '255.255.255.0' -> 256-2 hosts; '255.255.0.0' -> 256*256-2 hosts
+               TCP connection happens in the same network
+               Gateway is the router. A host can have multiple routers / gateways, could be configured by DHCP (Dynamic Host Configuration Protocol )
+Physical Layer: MAC (Media Address Control) [ = LAN Address = Ethernet Address = Physical Address] for each NIC (Network Interface Card = Network Adapter = LAN Adapter) specific
+Interface: the connection between physical devices
