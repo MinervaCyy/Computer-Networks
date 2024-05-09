@@ -1,1 +1,2 @@
-
+Little-Endian: inverse direction (8765) for the increase of memory address (->), in internal CPU, since the digital circuit calculates the lower byte first
+Big-Endian: same direction (5678) with the increase of memory address (->), network transmission and file storages use the Big-Endian, easy for human
